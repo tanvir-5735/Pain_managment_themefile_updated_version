@@ -1,0 +1,80 @@
+@import 'component/header';
+@import 'component/footer';
+@import 'component/about';
+@import 'component/home/home';
+@import 'component/AboutOurPhysicians';
+@import 'component/doctorSection';
+@import 'component/officeLocations';
+@import 'component/PatientEducation';
+@import 'component/contact';
+@import 'commonComponent';
+@import 'typography';
+@import 'variables';
+@import 'component/treatment_we_treat';
+
+@font-face {
+    font-family: "MyFont1";
+    src: url("../fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MyFont2";
+    src: url("../fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;  
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --primary-color: #1E3070;
+     --ff-primary: "MyFont1", sans-serif;
+    --ff-secondary: "MyFont2", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-primary);
+}
+html{
+    margin: 0px 0px 0px 0px !important;
+}
+body{
+    width: 100%;
+    background-color: white !important;
+    font-family: var(--ff-primary);
+}
+.hidden{display: none;}
+.myContiner {
+    width: 100%;
+    max-width: 1770px;
+    margin: 0 auto;
+
+}
+.breadCrumb{
+    width: 100%;
+    padding: 20px;
+}
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+#Condition_page{
+    padding-top: 152px;
+}
+
+

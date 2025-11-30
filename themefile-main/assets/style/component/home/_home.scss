@@ -1,0 +1,1943 @@
+// ======home style=======
+// @import '../../commonComponent';
+
+#homeBanner {
+    width: 100%;
+    height: calc(100vh - 100px);
+    min-height: 600px;
+    background-image: url("../images/homeBanner.png");
+    background-size: cover;
+    background-position: center center;
+
+    .banner_content_wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .banner_video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            video {
+                // aspect-ratio: 1770/826;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .banner_content {
+            width: 100%;
+            max-width: 650px;
+            padding: 5px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 2;
+
+            h1 {
+                font-size: 74px;
+                font-weight: 600;
+                color: white;
+            }
+
+            p {
+                padding: 20px 0 40px 0;
+                font-size: 16px;
+            }
+
+            .btnWrapper {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+
+                .myBtn {
+                    @include myBtn(12px, 24px)
+                }
+            }
+        }
+
+        // .text_us{
+        //     position: absolute;
+        //     bottom: 36px;
+        //     right: 48px;
+        //     z-index: 4;
+        //     width: fit-content;
+        //     padding: 5px 10px;
+        //     background-color: #1E3070;
+        //     color: white;
+        //     border-radius: 12px;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: space-between;
+        //     gap: 8px;
+        // }
+        // .message_us{
+        //     position: absolute;
+        //     bottom: 100px;
+        //     right: 10px;
+        //     z-index: 4;
+        //     width: fit-content;
+        //     padding: 22px 31px 43px 31px;
+        //     background-color: #E9EAF1;
+        //     border-radius: 20px;
+        //     display: flex;
+        //     align-items: start;
+        //     justify-content: space-between;
+        //     gap: 24px;
+        //     img{
+        //         width: 72px;
+        //         height: 72px;
+        //         border-radius: 50%;
+        //         border: 1px solid gray;
+        //     }
+        //     p{
+        //         width: 100%;
+        //         max-width: 205px;
+        //         font-size: 16px;
+        //     }
+        // }
+    }
+}
+
+#aboutPractice {
+    width: 100%;
+    height: fit-content;
+    margin: 80px 0;
+
+    .aboutPracticeWrapper {
+        width: 100%;
+        background-color: #E9EAF1;
+        padding: 48px;
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        gap: 80px;
+
+        .practiceImage {
+            width: 50%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .practiceContent {
+            width: 50%;
+            height: 100%;
+
+            h2 {
+                font-size: 64px;
+
+                &:nth-child(2) {
+                    color: green;
+                }
+            }
+
+            h5 {
+                font-size: 24px;
+                padding: 32px 0 16px 0;
+            }
+
+            .practiceContentWrapper {
+                .myBtn {
+                    margin-top: 20px;
+                    @include myBtn(12px, 30px);
+                }
+            }
+        }
+    }
+}
+
+#consitionWeTreat {
+    width: 100%;
+
+    .conditionWeTreatWrapper {
+
+
+        .treatmentGalary {
+            padding-top: 50px;
+
+            .treatmentGlaryWrapper {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: auto;
+                gap: 20px;
+
+                .glaryItem {
+                    .glaryCard {
+                        width: 100%;
+                        min-width: 300px;
+                        max-width: 425px;
+                        height: 556px;
+                        position: relative;
+
+                        .glaryImage {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 556px;
+                            border-radius: 12px;
+                            z-index: 3;
+                            filter: grayscale(1);
+                            transition: .3s all linear;
+                        }
+
+                        .glaryContent {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 256px;
+                            padding: 15px 0 0 0;
+                            z-index: 1;
+                            overflow-y: scroll;
+                            scrollbar-width: none;
+                            -ms-overflow-style: none;
+
+                            &::-webkit-scrollbar {
+                                display: none;
+                            }
+                        }
+
+                        &:hover .glaryImage {
+                            height: 300px;
+                            filter: grayscale(0);
+                        }
+
+                    }
+
+                    .cardTag {
+                        width: 100%;
+                        font-size: 28px;
+                        padding: 5px;
+                        text-align: left;
+                    }
+                }
+            }
+
+            .view_more_btn {
+                width: 100%;
+                padding: 20px 0;
+                text-align: center;
+
+                .myBtn{
+                    @include myBtn(20px , 80px)
+                }
+            }
+        }
+    }
+}
+
+#doctor_details {
+    width: 100%;
+
+    .doctor_Detail_Wrapper {
+        width: 100%;
+        padding: 48px;
+        background-color: #E9EAF173;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 12px;
+
+        .doctor_text_content {
+            width: 100%;
+
+            .text_content_wrapper {
+                width: 100%;
+                max-width: 797px;
+
+                h2 {
+                    color: #6DC31C;
+                    font-size: 64px;
+                }
+
+                .desc {
+                    padding: 20px 0 20px 0;
+                }
+
+                .book_now_button {
+
+                    .myBtn {
+                        @include myBtn(12px, 33px);
+                    }
+                }
+            }
+        }
+
+        .doctor_image_wrapper {
+            width: 100%;
+            max-width: 797px;
+
+            .doctor_Image {
+                aspect-ratio: 797/759;
+                max-height: 760px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+#Meet_Our_Expert_Doctor {
+    background: linear-gradient(#E9EAF1, #6dc31c05);
+
+    .specilist_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 102px;
+
+        .specilist_header {
+            text-align: center;
+            padding: 80px 10px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 400px;
+                height: 400px;
+                background: radial-gradient(#6DC31C52, #6dc31c2f, #6dc31c11, #6dc31c04, #6dc31c00);
+                border-radius: 50%;
+            }
+
+            span {
+                font-size: clamp(16px, calc(20px + 1vw), 24px);
+            }
+
+            h3 {
+                font-size: clamp(18px, calc(16px + 3vw), 56px);
+                color: var(--primary-color);
+            }
+
+        }
+
+        .specilist_card_wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 100px;
+            padding: 40px;
+
+            .specilist_card {
+                width: 100%;
+                max-width: 524px;
+                border-radius: 10px;
+
+                .card_image {
+                    width: 100%;
+                    aspect-ratio: 524/331;
+                    border: 1px solid transparent;
+                    background-color: #E9EAF1;
+                    border-radius: 10px 10px 0 0;
+                    position: relative;
+
+                    img {
+                        width: 80%;
+                        aspect-ratio: 460/534;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 rgba(128, 128, 128, 0.815);
+                }
+
+                &:hover .card_image {
+                    background-color: #e7e9fa;
+                    box-shadow: inset 0 0 10px 0 #68749F;
+                }
+
+                .card_content {
+                    width: 100%;
+                    padding: 24px;
+                    background-color: #68749F;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+
+                    h6 {
+                        font-size: 20px;
+                        color: white;
+                    }
+
+                    p {
+                        margin: 15px 0 20px 0;
+                        font-size: 1rem;
+                        color: white;
+                    }
+
+                    .card_btn_wrapper {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .myBtn {
+                            @include myBtn(12px, 40px)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    #homeBanner {
+        width: 100%;
+        height: calc(100vh - 100px);
+        min-height: 600px;
+        background-image: url("../images/homeBanner.png");
+        background-size: cover;
+        background-position: center center;
+
+        .banner_content_wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .banner_video {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                video {
+                    // aspect-ratio: 1770/826;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .banner_content {
+                width: 100%;
+                max-width: 650px;
+                padding: 5px;
+                text-align: center;
+                color: white;
+                position: relative;
+                z-index: 2;
+
+                h1 {
+                    font-size: 44px;
+                    font-weight: 600;
+                }
+
+                p {
+                    padding: 20px 0 40px 0;
+                    font-size: 16px;
+                }
+
+                .btnWrapper {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+
+                    .myBtn {
+                        @include myBtn(12px, 24px)
+                    }
+                }
+            }
+        }
+    }
+
+    #aboutPractice {
+        width: 100%;
+        height: fit-content;
+        margin: 40px 0;
+
+        .aboutPracticeWrapper {
+            width: 100%;
+            background-color: #E9EAF1;
+            padding: 45px 25px;
+            border-radius: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 42px;
+
+            .practiceImage {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .practiceContent {
+                width: 100%;
+                height: 100%;
+
+                h2 {
+                    font-size: 44px;
+                    line-height: 1.1;
+
+                    &:nth-child(2) {
+                        color: green;
+                    }
+                }
+
+                .practiceContentWrapper {
+                    button {
+                        border: none;
+                        outline: none;
+                        background-color: var(--primary-color);
+                        color: white;
+                        padding: 14px 20px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    #consitionWeTreat {
+        width: 100%;
+
+        .conditionWeTreatWrapper {
+            .heading {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                padding: 48px 20px;
+                border: 1px solid #6DC31C;
+                border-radius: 12px;
+                background-color: #F0F9E8;
+
+                .title {
+                    width: 100%;
+                    max-width: fit-content;
+                }
+
+                .lineWrapper {
+                    width: 100%;
+                    height: 5px;
+                    background: radial-gradient(green, #00814b, white, transparent);
+                    background-size: 100% 100%;
+                }
+
+                .desc {
+                    width: 100%;
+                }
+            }
+
+            .treatmentGalary {
+                .treatmentGlaryWrapper {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: auto;
+                    gap: 20px;
+
+                    .glaryItem {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .glaryCard {
+                            width: 100%;
+                            min-width: 300px;
+                            max-width: 425px;
+                            height: 556px;
+                            position: relative;
+
+                            .glaryImage {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 556px;
+                                z-index: 3;
+                                transition: .3s all linear;
+                            }
+
+                            .glaryContent {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 256px;
+                                z-index: 1;
+                            }
+
+                            &:hover .glaryImage {
+                                height: 300px;
+                            }
+
+                        }
+
+                        .cardTag {text-align: center;}
+                    }
+                }
+            }
+        }
+    }
+
+    #doctor_details {
+        width: 100%;
+
+        .doctor_Detail_Wrapper {
+            width: 100%;
+            padding: 45px 20px;
+            background-color: #E9EAF173;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 12px;
+
+            .doctor_text_content {
+                width: 100%;
+
+                .text_content_wrapper {
+                    width: 100%;
+                    max-width: 797px;
+
+                    h2 {
+                        color: #6DC31C;
+                        font-size: 44px;
+                    }
+
+                    .desc {
+                        padding: 20px 0 20px 0;
+                    }
+
+                }
+            }
+
+            .doctor_image_wrapper {
+                width: 100%;
+                max-width: 797px;
+
+                .doctor_Image {
+                    aspect-ratio: 797/759;
+                    max-height: 760px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    #Meet_Our_Expert_Doctor {
+        background: linear-gradient(#E9EAF1, #6dc31c05);
+
+        .specilist_wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 102px;
+
+            .specilist_header {
+                text-align: center;
+                padding: 40px 10px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 400px;
+                    height: 400px;
+                    background: radial-gradient(#6DC31C52, #6dc31c2f, #6dc31c11, #6dc31c04, #6dc31c00);
+                    border-radius: 50%;
+                }
+
+                span {
+                    font-size: clamp(16px, calc(20px + 1vw), 24px);
+                }
+
+                h3 {
+                    font-size: clamp(18px, calc(16px + 3vw), 56px);
+                    color: var(--primary-color);
+                }
+
+            }
+
+            .specilist_card_wrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                gap: 140px;
+                padding: 40px 20px;
+
+                .specilist_card {
+                    width: 100%;
+                    max-width: 524px;
+
+                    .card_image {
+                        width: 100%;
+                        aspect-ratio: 524/331;
+                        background-color: #E9EAF1;
+                        border-radius: 10px 10px 0 0;
+                        position: relative;
+
+                        img {
+                            width: 80%;
+                            aspect-ratio: 460/534;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    .card_content {
+                        width: 100%;
+                        padding: 24px;
+                        background-color: #68749F;
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+
+                        h6 {
+                            font-size: 20px;
+                            color: white;
+                        }
+
+                        p {
+                            margin: 15px 0 20px 0;
+                            font-size: 1rem;
+                            color: white;
+                        }
+
+                        .card_btn_wrapper {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .myBtn {
+                                @include myBtn(12px, 40px)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:576px) {
+    #homeBanner {
+        width: 100%;
+        height: calc(100vh - 100px);
+        min-height: 600px;
+        background-image: url("../images/homeBanner.png");
+        background-size: cover;
+        background-position: center center;
+
+        .banner_content_wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            .banner_video {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                video {
+                    // aspect-ratio: 1770/826;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .banner_content {
+                width: 100%;
+                max-width: 650px;
+                padding: 5px;
+                text-align: center;
+                color: white;
+                position: relative;
+                z-index: 2;
+
+                h1 {
+                    font-size: 44px;
+                    font-weight: 600;
+                }
+
+                p {
+                    padding: 20px 0 40px 0;
+                    font-size: 16px;
+                }
+
+                .btnWrapper {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+
+                    .myBtn {
+                        @include myBtn(12px, 24px)
+                    }
+                }
+            }
+        }
+    }
+
+    #aboutPractice {
+        width: 100%;
+        height: fit-content;
+        margin: 40px 0;
+
+        .aboutPracticeWrapper {
+            width: 100%;
+            background-color: #E9EAF1;
+            padding: 45px 25px;
+            border-radius: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 42px;
+
+            .practiceImage {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .practiceContent {
+                width: 100%;
+                height: 100%;
+
+                h2 {
+                    font-size: 44px;
+                    line-height: 1.1;
+
+                    &:nth-child(2) {
+                        color: green;
+                    }
+                }
+
+                .practiceContentWrapper {
+                    .btnWrapper {
+                        display: flex;
+                        justify-content: center;
+                        gap: 30px;
+
+                        .myBtn {
+                            @include myBtn(12px, 24px)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #consitionWeTreat {
+        width: 100%;
+
+        .conditionWeTreatWrapper {
+            .heading {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                padding: 48px 20px;
+                border: 1px solid #6DC31C;
+                border-radius: 12px;
+                background-color: #F0F9E8;
+
+                .title {
+                    width: 100%;
+                    max-width: fit-content;
+                }
+
+                .lineWrapper {
+                    width: 100%;
+                    height: 5px;
+                    background: radial-gradient(green, #00814b, white, transparent);
+                    background-size: 100% 100%;
+                }
+
+                .desc {
+                    width: 100%;
+                }
+            }
+
+            .treatmentGalary {
+                .treatmentGlaryWrapper {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: auto;
+                    gap: 20px;
+
+                    .glaryItem {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .glaryCard {
+                            width: 100%;
+                            min-width: 300px;
+                            max-width: 425px;
+                            height: 556px;
+                            position: relative;
+
+                            .glaryImage {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 556px;
+                                z-index: 3;
+                                filter: grayscale(1);
+                                transition: .3s all linear;
+                            }
+
+                            .glaryContent {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 256px;
+                                z-index: 1;
+                            }
+
+                            &:hover .glaryImage {
+                                height: 300px;
+                                filter: grayscale(0);
+                            }
+
+                        }
+
+                        .cardTag {text-align: center;}
+                    }
+                }
+            }
+        }
+    }
+
+    #doctor_details {
+        width: 100%;
+
+        .doctor_Detail_Wrapper {
+            width: 100%;
+            padding: 45px 20px;
+            background-color: #E9EAF173;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 12px;
+
+            .doctor_text_content {
+                width: 100%;
+
+                .text_content_wrapper {
+                    width: 100%;
+                    max-width: 797px;
+
+                    h2 {
+                        color: #6DC31C;
+                        font-size: 44px;
+                    }
+
+                    .desc {
+                        padding: 20px 0 20px 0;
+                    }
+
+                }
+            }
+
+            .doctor_image_wrapper {
+                width: 100%;
+                max-width: 797px;
+
+                .doctor_Image {
+                    aspect-ratio: 797/759;
+                    max-height: 760px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    #Meet_Our_Expert_Doctor {
+        background: linear-gradient(#E9EAF1, #6dc31c05);
+
+        .specilist_wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 102px;
+
+            .specilist_header {
+                text-align: center;
+                padding: 80px 10px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 400px;
+                    height: 400px;
+                    background: radial-gradient(#6DC31C52, #6dc31c2f, #6dc31c11, #6dc31c04, #6dc31c00);
+                    border-radius: 50%;
+                }
+
+                span {
+                    font-size: clamp(16px, calc(20px + 1vw), 24px);
+                }
+
+                h3 {
+                    font-size: clamp(18px, calc(16px + 3vw), 56px);
+                    color: var(--primary-color);
+                }
+
+            }
+
+            .specilist_card_wrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                gap: 140px;
+                padding: 40px;
+
+                .specilist_card {
+                    width: 100%;
+                    max-width: 524px;
+
+                    .card_image {
+                        width: 100%;
+                        aspect-ratio: 524/331;
+                        background-color: #E9EAF1;
+                        border-radius: 10px 10px 0 0;
+                        position: relative;
+
+                        img {
+                            width: 80%;
+                            aspect-ratio: 460/534;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    .card_content {
+                        width: 100%;
+                        padding: 24px;
+                        background-color: #68749F;
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+
+                        p {
+                            margin: 15px 0 20px 0;
+                            font-size: 1rem;
+                            color: white;
+                        }
+
+                        .card_btn_wrapper {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .myBtn {
+                                @include myBtn(12px, 40px)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    #homeBanner {
+        width: 100%;
+        height: calc(100vh - 100px);
+        min-height: 600px;
+        background-image: url("../images/homeBanner.png");
+        background-size: cover;
+        background-position: center center;
+
+        .banner_content_wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            .banner_video {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                video {
+                    // aspect-ratio: 1770/826;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .banner_content {
+                width: 100%;
+                max-width: 650px;
+                padding: 5px;
+                text-align: center;
+                color: white;
+                position: relative;
+                z-index: 2;
+
+                h1 {
+                    font-size: 44px;
+                    font-weight: 600;
+                }
+
+                p {
+                    padding: 20px 0 40px 0;
+                    font-size: 16px;
+                }
+
+                .btnWrapper {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+
+                    .myBtn {
+                        @include myBtn(12px, 24px)
+                    }
+                }
+            }
+        }
+    }
+
+    #aboutPractice {
+        width: 100%;
+        height: fit-content;
+        margin: 40px 0;
+
+        .aboutPracticeWrapper {
+            width: 100%;
+            background-color: #E9EAF1;
+            padding: 45px 25px;
+            border-radius: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 42px;
+
+            .practiceImage {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .practiceContent {
+                width: 100%;
+                height: 100%;
+
+                h2 {
+                    font-size: 44px;
+                    line-height: 1.1;
+
+                    &:nth-child(2) {
+                        color: green;
+                    }
+                }
+
+                .practiceContentWrapper {
+                    button {
+                        border: none;
+                        outline: none;
+                        background-color: var(--primary-color);
+                        color: white;
+                        padding: 14px 20px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    #consitionWeTreat {
+        width: 100%;
+
+        .conditionWeTreatWrapper {
+            .heading {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                padding: 48px 20px;
+                border: 1px solid #6DC31C;
+                border-radius: 12px;
+                background-color: #F0F9E8;
+
+                .title {
+                    width: 100%;
+                    max-width: fit-content;
+                }
+
+                .lineWrapper {
+                    width: 100%;
+                    height: 5px;
+                    background: radial-gradient(green, #00814b, white, transparent);
+                    background-size: 100% 100%;
+                }
+
+                .desc {
+                    width: 100%;
+                }
+            }
+
+            .treatmentGalary {
+                .treatmentGlaryWrapper {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: auto;
+                    gap: 20px;
+
+                    .glaryItem {
+                        .glaryCard {
+                            width: 100%;
+                            min-width: 300px;
+                            max-width: 425px;
+                            height: 556px;
+                            position: relative;
+
+                            .glaryImage {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 556px;
+                                z-index: 3;
+                                filter: grayscale(1);
+                                transition: .3s all linear;
+                            }
+
+                            .glaryContent {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 256px;
+                                z-index: 1;
+                            }
+
+                            &:hover .glaryImage {
+                                height: 300px;
+                                filter: grayscale(0);
+                            }
+
+                        }
+
+                        .cardTag {text-align: left;}
+                    }
+                }
+            }
+        }
+    }
+
+    #doctor_details {
+        width: 100%;
+
+        .doctor_Detail_Wrapper {
+            width: 100%;
+            padding: 45px 20px;
+            background-color: #E9EAF173;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            border-radius: 12px;
+
+            .doctor_text_content {
+                width: 100%;
+
+                .text_content_wrapper {
+                    width: 100%;
+                    max-width: 797px;
+
+                    h2 {
+                        color: #6DC31C;
+                        font-size: 44px;
+                    }
+
+                    .desc {
+                        padding: 20px 0 20px 0;
+                    }
+
+                }
+            }
+
+            .doctor_image_wrapper {
+                width: 100%;
+                max-width: 797px;
+
+                .doctor_Image {
+                    aspect-ratio: 797/759;
+                    max-height: 760px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    #Meet_Our_Expert_Doctor {
+        background: linear-gradient(#E9EAF1, #6dc31c05);
+
+        .specilist_wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .specilist_header {
+                text-align: center;
+                padding: 80px 10px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 400px;
+                    height: 400px;
+                    background: radial-gradient(#6DC31C52, #6dc31c2f, #6dc31c11, #6dc31c04, #6dc31c00);
+                    border-radius: 50%;
+                }
+
+                span {
+                    font-size: clamp(16px, calc(20px + 1vw), 24px);
+                }
+
+                h3 {
+                    font-size: clamp(18px, calc(16px + 3vw), 56px);
+                    color: var(--primary-color);
+                }
+
+            }
+
+            .specilist_card_wrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                gap: 30px;
+                padding: 40px;
+
+                .specilist_card {
+                    width: 100%;
+                    max-width: 524px;
+
+                    .card_image {
+                        width: 100%;
+                        aspect-ratio: 524/331;
+                        background-color: #E9EAF1;
+                        border-radius: 10px 10px 0 0;
+                        position: relative;
+
+                        img {
+                            width: 80%;
+                            aspect-ratio: 460/534;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    .card_content {
+                        width: 100%;
+                        padding: 24px;
+                        background-color: #68749F;
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+
+                        p {
+                            margin: 15px 0 20px 0;
+                            font-size: 1rem;
+                            color: white;
+                        }
+
+                        .card_btn_wrapper {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .myBtn {
+                                @include myBtn(10px, 30px);
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #homeBanner {
+        width: 100%;
+        height: calc(100vh - 100px);
+        min-height: 600px;
+        background-image: url("../images/homeBanner.png");
+        background-size: cover;
+        background-position: center center;
+
+        .banner_content_wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .banner_video {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                video {
+                    // aspect-ratio: 1770/826;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .banner_content {
+                width: 100%;
+                max-width: 650px;
+                padding: 5px;
+                text-align: center;
+                color: white;
+                position: relative;
+                z-index: 2;
+
+                h1 {
+                    font-size: 44px;
+                    font-weight: 600;
+                }
+
+                p {
+                    padding: 20px 0 40px 0;
+                    font-size: 16px;
+                }
+
+                .btnWrapper {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+
+                    .myBtn {
+                        @include myBtn(12px, 24px)
+                    }
+                }
+            }
+        }
+    }
+
+    #aboutPractice {
+        width: 100%;
+        height: fit-content;
+        margin: 40px 0;
+
+        .aboutPracticeWrapper {
+            width: 100%;
+            background-color: #E9EAF1;
+            padding: 45px 25px;
+            border-radius: 32px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 42px;
+
+            .practiceImage {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .practiceContent {
+                width: 100%;
+                height: 100%;
+
+                h2 {
+                    font-size: 44px;
+                    line-height: 1.1;
+
+                    &:nth-child(2) {
+                        color: green;
+                    }
+                }
+
+                .practiceContentWrapper {
+                    button {
+                        border: none;
+                        outline: none;
+                        background-color: var(--primary-color);
+                        color: white;
+                        padding: 14px 20px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    #consitionWeTreat {
+        width: 100%;
+
+        .conditionWeTreatWrapper {
+            .heading {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                padding: 48px 20px;
+                border: 1px solid #6DC31C;
+                border-radius: 12px;
+                background-color: #F0F9E8;
+
+                .title {
+                    width: 100%;
+                    max-width: fit-content;
+                }
+
+                .lineWrapper {
+                    width: 50%;
+                    height: 5px;
+                    background: radial-gradient(green, #00814b, white, transparent);
+                    background-size: 100% 100%;
+                }
+
+                .desc {
+                    width: 100%;
+                }
+            }
+
+            .treatmentGalary {
+                .treatmentGlaryWrapper {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: auto;
+                    gap: 20px;
+
+                    .glaryItem {
+                        .glaryCard {
+                            width: 100%;
+                            min-width: 300px;
+                            max-width: 425px;
+                            height: 556px;
+                            position: relative;
+
+                            .glaryImage {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 556px;
+                                z-index: 3;
+                                filter: grayscale(1);
+                                transition: .3s all linear;
+                            }
+
+                            .glaryContent {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 256px;
+                                z-index: 1;
+                            }
+
+                            &:hover .glaryImage {
+                                height: 300px;
+                                filter: grayscale(0);
+                            }
+
+                        }
+
+                        .cardTag {}
+                    }
+                }
+            }
+        }
+    }
+
+    #Meet_Our_Expert_Doctor {
+        background: linear-gradient(#E9EAF1, #6dc31c05);
+
+        .specilist_wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 102px;
+
+            .specilist_header {
+                text-align: center;
+                padding: 80px 10px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 400px;
+                    height: 400px;
+                    background: radial-gradient(#6DC31C52, #6dc31c2f, #6dc31c11, #6dc31c04, #6dc31c00);
+                    border-radius: 50%;
+                }
+
+                span {
+                    font-size: clamp(16px, calc(20px + 1vw), 24px);
+                }
+
+                h3 {
+                    font-size: clamp(18px, calc(16px + 3vw), 56px);
+                    color: var(--primary-color);
+                }
+
+            }
+
+            .specilist_card_wrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                gap: 140px;
+                padding: 40px;
+
+                .specilist_card {
+                    width: 100%;
+                    max-width: 524px;
+
+                    .card_image {
+                        width: 100%;
+                        aspect-ratio: 524/331;
+                        background-color: #E9EAF1;
+                        border-radius: 10px 10px 0 0;
+                        position: relative;
+
+                        img {
+                            width: 80%;
+                            aspect-ratio: 460/534;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    .card_content {
+                        width: 100%;
+                        padding: 24px;
+                        background-color: #68749F;
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+
+                        p {
+                            margin: 15px 0 20px 0;
+                            font-size: 1rem;
+                            color: white;
+                        }
+
+                        .card_btn_wrapper {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .myBtn {
+                                @include myBtn(12px, 40px);
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (min-width:1200px) {
+    #homeBanner {
+        width: 100%;
+        height: calc(100vh - 100px);
+        min-height: 600px;
+        background-image: url("../images/homeBanner.png");
+        background-size: cover;
+        background-position: center center;
+
+        .banner_content_wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            .banner_video {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                video {
+                    // aspect-ratio: 1770/826;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .banner_content {
+                width: 100%;
+                max-width: 665px;
+                padding: 5px;
+                text-align: center;
+                color: white;
+                position: relative;
+                z-index: 2;
+
+                h1 {
+                    font-size: 74px;
+                    font-weight: 700;
+                }
+
+                p {
+                    padding: 16px 0 32px 0;
+                    font-size: 16px;
+                }
+
+                .btnWrapper {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+
+                    .myBtn {
+                        @include myBtn(12px, 24px)
+                    }
+                }
+            }
+        }
+    }
+
+    #aboutPractice {
+        width: 100%;
+        height: fit-content;
+        margin: 80px 0;
+
+        .aboutPracticeWrapper {
+            width: 100%;
+            background-color: #E9EAF1;
+            padding: 48px;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+
+            .practiceImage {
+                width: 50%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .practiceContent {
+                width: 50%;
+                height: 100%;
+
+                h2 {
+                    font-size: 64px;
+
+                    &:nth-child(2) {
+                        color: green;
+                    }
+                }
+
+                .practiceContentWrapper {
+                    button {
+                        border: none;
+                        outline: none;
+                        background-color: var(--primary-color);
+                        color: white;
+                        padding: 14px 20px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    #consitionWeTreat {
+        width: 100%;
+
+        .conditionWeTreatWrapper {
+            .heading {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                padding: 48px 20px;
+                border: 1px solid #6DC31C;
+                border-radius: 12px;
+                background-color: #F0F9E8;
+                margin-bottom: 48px;
+
+                .title {
+                    width: 30%;
+                    max-width: fit-content;
+                }
+
+                .lineWrapper {
+                    width: 20%;
+                    height: 5px;
+                    background: radial-gradient(green, #00814b, white, transparent);
+                    background-size: 100% 100%;
+                }
+
+                .desc {
+                    width: 60%;
+                }
+            }
+
+            .treatmentGalary {
+                .treatmentGlaryWrapper {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: auto;
+                    gap: 20px;
+
+                    .glaryItem {
+                        .glaryCard {
+                            width: 100%;
+                            min-width: 300px;
+                            max-width: 425px;
+                            height: 556px;
+                            position: relative;
+
+                            .glaryImage {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 556px;
+                                z-index: 3;
+                                transition: .3s all linear;
+                                filter: grayscale(1);
+                            }
+
+                            .glaryContent {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 256px;
+                                z-index: 1;
+                            }
+
+                            &:hover .glaryImage {
+                                height: 300px;
+                                filter: grayscale(0);
+                            }
+
+                        }
+
+                        .cardTag {}
+                    }
+                }
+            }
+        }
+    }
+}

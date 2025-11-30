@@ -1,0 +1,115 @@
+// treatment_we_treat
+#treatment_we_treat {
+    width: 100%;
+    padding: 152px 0 50px 0;
+
+    .treatment_card_continer {
+        .treatment_card_wrapper {
+            width: 100%;
+            padding-top: 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+            gap: 20px;
+            justify-items: center;
+
+            .flip-card {
+                background-color: transparent;
+                width: 100%;
+                max-width: 425px;
+                aspect-ratio: 425/445;
+                perspective: 1000px;
+                padding: 2px;
+                margin: 10px;
+
+                &:hover .flip-card-inner {
+                    transform: rotateY(180deg);
+                }
+
+                .flip-card-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    transition: transform 0.5s;
+                    transform-style: preserve-3d;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+                    .flip-card-front,
+                    .flip-card-back {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 12px;
+                        backface-visibility: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        font-family: sans-serif;
+                        padding: 20px;
+                    }
+
+                    .flip-card-front {
+                        background-color: #1E3070;
+
+                        h4,
+                        h2,
+                        p {
+                            display: inline-block;
+                            width: 100%;
+                            max-width: 264px;
+                            color: white;
+                        }
+
+                        h4 {
+                            font-size: 32px;
+                            word-wrap: break-word;
+                        }
+                    }
+
+                    .flip-card-back {
+                        background-color: #344CA3;
+                        transform: rotateY(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    #treatment_we_treat {
+        width: 100%;
+        padding: 65px 0 50px 0;
+
+        .treatment_card_continer {
+            .treatment_card_wrapper {
+                .flip-card {
+                    max-width: 320px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:576px) {
+    #treatment_we_treat {
+        width: 100%;
+        padding: 65px 0 50px 0;
+
+        .treatment_card_continer {
+            .treatment_card_wrapper {
+                .flip-card {
+                    max-width: 425px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1200px) {
+    #treatment_we_treat {
+        width: 100%;
+        padding: 115px 0 50px 0;
+    }
+}
